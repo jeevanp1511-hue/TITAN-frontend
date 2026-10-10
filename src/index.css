@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0f1d] text-slate-100 min-h-screen;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1322;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Card Glow Effect */
+.titan-card {
+  @apply bg-[#111827]/80 backdrop-blur-md border border-[#1f293d] rounded-xl shadow-lg transition-all duration-200;
+}
+.titan-card:hover {
+  @apply border-teal-500/40 shadow-teal-500/5;
+}
+
+.titan-card-glow {
+  @apply bg-[#111827]/90 border border-teal-500/30 shadow-lg shadow-teal-500/10;
+}
+
+/* Restrained Teal Gradient */
+.text-teal-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-300 to-teal-500;
+}
